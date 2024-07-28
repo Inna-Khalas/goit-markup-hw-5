@@ -548,6 +548,12 @@ img {
     background-color: #31d0aa
 }
 
+.footer-block {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
 .input-footer {
     border: 1px solid #fff;
     border-radius: 4px;
@@ -564,7 +570,11 @@ img {
     color: #fff;
 }
 
-.footer-icon {}
+.footer-icon {
+    /* position: absolute;
+    right: 16px; */
+
+}
 
 .icon {
     display: flex;
@@ -582,7 +592,15 @@ img {
     position: fixed;
     top: 0;
     background-color: rgba(46, 47, 66, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
 
+.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .modal {
@@ -601,6 +619,32 @@ img {
 .modal-button {
     display: block;
     margin-left: auto;
+    border-radius: 100%;
+    /* fill: #e7e9fc; */
+    stroke-width: 1px;
+    stroke: rgba(0, 0, 0, 0.1);
+    width: 24px;
+    height: 24px;
+    background-color: #e7e9fc;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.modal-button-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-button:hover {
+    background-color: #404bbf;
+    ;
+
+}
+
+.modal-button-icon:hover {
+    fill: #fff;
 }
 
 .modal-txt {
@@ -634,6 +678,7 @@ img {
     padding-left: 38px;
     outline: transparent;
     margin-top: 4px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input::placeholder,
@@ -677,6 +722,7 @@ img {
     outline: transparent;
     margin-top: 4px;
     resize: none;
+    margin-bottom: 16px;
 }
 
 .modal-btn {
@@ -705,4 +751,40 @@ img {
 
 .modal-btn:hover {
     background-color: #404bbf;
+}
+
+.modal-check-text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.modal-check-text span {
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+}
+
+.modal-check:checked+.modal-check-text span {
+    background-color: #404bbf;
+    border: none;
+    fill: #F4F4FD;
+}
+
+.check-link {
+    line-height: 1.33333;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #4d5ae5;
 }
