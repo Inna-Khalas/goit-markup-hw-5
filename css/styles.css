@@ -523,6 +523,9 @@ img {
 
 .form-footer {
     display: flex;
+justify-content: flex-start;
+align-items:center;
+margin-left:80px;
     gap: 24px;
 }
 
@@ -589,6 +592,7 @@ img {
     letter-spacing: 0.02em;
     color: #fff;
     margin-bottom: 16px;
+    margin-left:80px;
 }
 
 .footer-btn {
