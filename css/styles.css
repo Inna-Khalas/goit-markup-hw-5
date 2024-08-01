@@ -576,13 +576,14 @@ margin-left:80px;
     background-color: transparent;
     font-size: 12px;
     line-height: 2;
+    color: #ffff;
     letter-spacing: 0.04em;
     padding-left: 16px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
 .input-footer::placeholder {
-    color #ffffff;
+    color: #ffffff;
 }
 
 .input-footer-txt {
@@ -705,11 +706,11 @@ margin-left:80px;
 
 }
 
-.modal-button:hover+.modal-button-icon {
+.modal-button-icon:hover {
     fill: #fff;
 }
 
-.modal-button:focus+.modal-button-icon {
+.modal-button-icon:focus {
     fill: #fff;
 }
 
@@ -807,7 +808,6 @@ margin-left:80px;
     color: #2E2F42;
     padding: 8px 16px;
     outline: transparent;
-    /* margin-top: 4px; */
     resize: none;
     font-size: 12px;
     line-height: 1.17;
@@ -869,11 +869,11 @@ margin-left:80px;
 }
 
 .modal-check-text span {
+     display: inline-flex;
     width: 16px;
     height: 16px;
     border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.4);
-    display: inline-flex;
     align-items: center;
     justify-content: center;
     fill: transparent;
